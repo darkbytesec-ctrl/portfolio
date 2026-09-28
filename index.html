@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Solanki | Offensive Security Researcher & Bug Hunter</title>
+    <meta name="description" content="Portfolio of Parth Solanki - Offensive Security Researcher, Bug Bounty Hunter, and Red Teamer specializing in Web Application Security, API Pentesting, and Exploit Research.">
+    <meta name="author" content="Parth Solanki">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cyber-theme">
+    <!-- Matrix / Canvas Background -->
+    <canvas id="cyber-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-bracket">[</span>
+                <span class="brand-name">PARTH.SOLANKI</span>
+                <span class="brand-blink">_</span>
+                <span class="brand-bracket">]</span>
+            </a>
+
+            <div class="nav-status">
+                <span class="pulse-indicator"></span>
+                <span class="status-text">STATUS: HUNTING BUGS</span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a>
+                <a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a>
+                <a href="#hof" class="nav-link"><span class="nav-num">03.</span> Hall of Fame</a>
+                <a href="#research" class="nav-link"><span class="nav-num">04.</span> Research</a>
+                <a href="#terminal-section" class="nav-link"><span class="nav-num">05.</span> Terminal</a>
+                <a href="#contact" class="nav-link"><span class="nav-num">06.</span> Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="canvas-toggle-btn" class="icon-btn" title="Toggle Background Animation">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <a href="#contact" class="btn btn-outline-cyan nav-cta">Initiate Contact</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="terminal-tag">
+                        <span class="tag-prefix">root@offensive:~#</span>
+                        <span class="tag-text">whoami --verbose</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Parth Solanki
+                        <span class="glitch-text" data-text="Parth Solanki"></span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Offensive Security Specialist <span class="accent-slash">//</span> Red Teamer <span class="accent-slash">//</span> Bug Bounty Hunter
+                    </h2>
+                    <p class="hero-description">
+                        Dissecting complex architectures, uncovering high-impact business logic flaws, and breaking web & API systems to help forward-thinking organizations build resilient, bulletproof infrastructure.
+                    </p>
+
+                    <div class="hero-badges">
+                        <span class="badge badge-cyan"><i class="fas fa-shield-alt"></i> Web & API Pentesting</span>
+                        <span class="badge badge-green"><i class="fas fa-bug"></i> Bug Bounty Hunter</span>
+                        <span class="badge badge-purple"><i class="fas fa-crosshairs"></i> Red Teaming</span>
+                        <span class="badge badge-amber"><i class="fas fa-code"></i> Exploit Automation</span>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="#terminal-section" class="btn btn-primary-cyan">
+                            <i class="fas fa-terminal"></i> Launch Terminal
+                        </a>
+                        <a href="#hof" class="btn btn-outline-light">
+                            <i class="fas fa-trophy"></i> View Hall of Fame
+                        </a>
+                        <a href="https://linkedin.com/in/parth-solanki-b3713a171" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyan">
+                            <i class="fab fa-linkedin"></i> LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-terminal-preview">
+                    <div class="terminal-card shadow-glow-cyan">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="term-btn btn-close"></span>
+                                <span class="term-btn btn-minimize"></span>
+                                <span class="term-btn btn-expand"></span>
+                            </div>
+                            <div class="terminal-title">parth@redteam: ~/recon-quickview</div>
+                            <div class="term-badge">LIVE</div>
+                        </div>
+                        <div class="terminal-body" id="hero-quick-terminal">
+                            <p class="term-line"><span class="term-prompt">$</span> cat target_summary.json</p>
+                            <pre class="term-code"><span class="json-key">"operator"</span>: <span class="json-val">"Parth Solanki"</span>,
+<span class="json-key">"specialization"</span>: <span class="json-val">"Offensive Security & AppSec"</span>,
+<span class="json-key">"focus_areas"</span>: [
+  <span class="json-str">"Business Logic Bypass"</span>,
+  <span class="json-str">"IDOR & Broken Access Control"</span>,
+  <span class="json-str">"SSRF / Cloud Metadata Pivoting"</span>,
+  <span class="json-str">"Race Conditions & FinTech Logic"</span>
+],
+<span class="json-key">"current_target"</span>: <span class="json-val">"Hardening Global Infrastructure"</span>,
+<span class="json-key">"status"</span>: <span class="json-highlight">"READY_FOR_ENGAGEMENTS"</span></pre>
+                            <p class="term-line typing-target"><span class="term-prompt">$</span> <span class="typed-text"></span><span class="cursor-blink">|</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-strip">
+                <div class="container stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-plus">+</div>
+                        <div class="stat-label">Vulnerabilities Identified</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-plus">+</div>
+                        <div class="stat-label">Hall of Fame Recognitions</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-plus">%</div>
+                        <div class="stat-label">Responsible Disclosure Rate</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-plus">th</div>
+                        <div class="stat-label">Percentile Research Precision</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 01. INTEL_REPORT</span>
+                    <h2 class="section-title">About Parth Solanki</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <p class="about-lead">
+                            I am a security researcher with an attacker mindset and an engineer’s rigor, committed to finding vulnerabilities before adversarial actors do.
+                        </p>
+                        <p class="about-body">
+                            My journey is driven by deep curiosity regarding how software fails at the seams. Rather than relying solely on automated scanners, I specialize in manual architectural auditing, complex state-machine analysis, race conditions, authentication flukes, and business logic flaws.
+                        </p>
+                        <p class="about-body">
+                            Whether hunting vulnerabilities in Fortune 500 bug bounty scopes or executing red team operations, I bridge technical exploitation with clear, high-impact risk demonstration and actionable remediation blueprints.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-chess-knight"></i></div>
+                                <div class="highlight-details">
+                                    <h4>Offensive Methodology</h4>
+                                    <p>Comprehensive recon, attack surface mapping, and deep manual probe analysis.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-lock-open"></i></div>
+                                <div class="highlight-details">
+                                    <h4>Logic Flaws & Zero-Days</h4>
+                                    <p>Expertise in bypassing defense-in-depth, WAF mechanisms, and multi-tier ACLs.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-file-shield"></i></div>
+                                <div class="highlight-details">
+                                    <h4>Executive Remediation</h4>
+                                    <p>Clean technical documentation with reproducible PoCs and defensive architecture recommendations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-sidebar">
+                        <div class="cyber-box profile-card">
+                            <div class="profile-header">
+                                <div class="profile-avatar">
+                                    <i class="fas fa-user-secret"></i>
+                                </div>
+                                <div class="profile-meta">
+                                    <h3>Parth Solanki</h3>
+                                    <span class="handle">@parthsolanki</span>
+                                    <span class="role-chip">Red Team & Bug Bounty</span>
+                                </div>
+                            </div>
+                            <div class="profile-details-list">
+                                <div class="p-detail">
+                                    <span class="lbl"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                                    <span class="val">India / Global Remote</span>
+                                </div>
+                                <div class="p-detail">
+                                    <span class="lbl"><i class="fas fa-laptop-code"></i> Primary Stack:</span>
+                                    <span class="val">Web, REST/GraphQL, Cloud</span>
+                                </div>
+                                <div class="p-detail">
+                                    <span class="lbl"><i class="fas fa-shield-virus"></i> Core Specialization:</span>
+                                    <span class="val">IDOR, SSRF, Auth Bypass, SQLi</span>
+                                </div>
+                                <div class="p-detail">
+                                    <span class="lbl"><i class="fas fa-envelope"></i> Email:</span>
+                                    <span class="val accent-cyan">Available via Contact</span>
+                                </div>
+                                <div class="p-detail">
+                                    <span class="lbl"><i class="fab fa-linkedin"></i> LinkedIn:</span>
+                                    <span class="val"><a href="https://linkedin.com/in/parth-solanki-b3713a171" target="_blank" rel="noopener">parth-solanki-b3713a171</a></span>
+                                </div>
+                            </div>
+                            <div class="profile-actions">
+                                <a href="#contact" class="btn btn-sm btn-outline-cyan w-100">Send Encrypted Note</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Arsenal Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 02. ARSENAL & EXPERTISE</span>
+                    <h2 class="section-title">Technical Capabilities</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Web Security -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fas fa-globe cyber-icon"></i>
+                            <h3>Web & API Pentesting</h3>
+                        </div>
+                        <ul class="skill-pill-list">
+                            <li><i class="fas fa-check-circle"></i> Broken Object Level Authorization (BOLA/IDOR)</li>
+                            <li><i class="fas fa-check-circle"></i> Server-Side Request Forgery (SSRF)</li>
+                            <li><i class="fas fa-check-circle"></i> Race Conditions & Concurrency Flaws</li>
+                            <li><i class="fas fa-check-circle"></i> OAuth 2.0 / JWT Implementation Flaws</li>
+                            <li><i class="fas fa-check-circle"></i> GraphQL Introspection & Authorization</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced SQL Injection & NoSQLi</li>
+                            <li><i class="fas fa-check-circle"></i> Cross-Site Scripting (Stored/DOM XSS)</li>
+                            <li><i class="fas fa-check-circle"></i> CSRF & CORS Misconfigurations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Red Teaming & Infrastructure -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fas fa-network-wired cyber-icon"></i>
+                            <h3>Red Teaming & Network</h3>
+                        </div>
+                        <ul class="skill-pill-list">
+                            <li><i class="fas fa-check-circle"></i> Active Directory Enumeration</li>
+                            <li><i class="fas fa-check-circle"></i> External Attack Surface Management (EASM)</li>
+                            <li><i class="fas fa-check-circle"></i> Cloud Metadata Exfiltration (AWS/GCP/Azure)</li>
+                            <li><i class="fas fa-check-circle"></i> Subdomain Takeover & DNS Misconfigurations</li>
+                            <li><i class="fas fa-check-circle"></i> Reverse Proxy & WAF Evasion Techniques</li>
+                            <li><i class="fas fa-check-circle"></i> Port Scanning & Service Fingerprinting</li>
+                            <li><i class="fas fa-check-circle"></i> Privilege Escalation (Linux & Windows)</li>
+                            <li><i class="fas fa-check-circle"></i> Network Traffic Analysis & Sniffing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Security Tooling -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fas fa-toolbox cyber-icon"></i>
+                            <h3>Security Arsenal & Tools</h3>
+                        </div>
+                        <div class="tools-tag-cloud">
+                            <span class="tool-tag">Burp Suite Pro</span>
+                            <span class="tool-tag">OWASP ZAP</span>
+                            <span class="tool-tag">Nuclei</span>
+                            <span class="tool-tag">Nmap</span>
+                            <span class="tool-tag">Wireshark</span>
+                            <span class="tool-tag">Postman</span>
+                            <span class="tool-tag">ffuf</span>
+                            <span class="tool-tag">sqlmap</span>
+                            <span class="tool-tag">Metasploit</span>
+                            <span class="tool-tag">Amass</span>
+                            <span class="tool-tag">Sublist3r</span>
+                            <span class="tool-tag">httpx</span>
+                            <span class="tool-tag">GitLab CLI</span>
+                            <span class="tool-tag">Docker</span>
+                            <span class="tool-tag">Linux / Kali</span>
+                        </div>
+                    </div>
+
+                    <!-- Development & Scripting -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fas fa-code cyber-icon"></i>
+                            <h3>Scripting & Automation</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="bar-group">
+                                <div class="bar-label">
+                                    <span>Python (Recon & Exploit Automation)</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 92%"></div></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar-label">
+                                    <span>Bash / Shell Scripting</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar-label">
+                                    <span>JavaScript / Node.js (Web & API Audit)</span>
+                                    <span>82%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar-label">
+                                    <span>Go (High-Concurrency Tooling)</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hall of Fame & Recognitions -->
+        <section id="hof" class="section hof-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 03. ACKNOWLEDGMENTS</span>
+                    <h2 class="section-title">Hall of Fame & Recognitions</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-subtitle">
+                    Recognized by global platforms, multinational corporations, and responsible disclosure initiatives for uncovering and remediating high-severity security vulnerabilities.
+                </p>
+
+                <div class="hof-grid">
+                    <!-- HOF Card 1 -->
+                    <div class="hof-card">
+                        <div class="hof-icon-wrap">
+                            <i class="fab fa-google hof-icon"></i>
+                        </div>
+                        <div class="hof-content">
+                            <h4>Google VRP</h4>
+                            <span class="hof-role">Security Researcher</span>
+                            <p>Responsible disclosure of application vulnerabilities across external asset scopes.</p>
+                            <span class="severity-pill sev-high">High Severity</span>
+                        </div>
+                    </div>
+
+                    <!-- HOF Card 2 -->
+                    <div class="hof-card">
+                        <div class="hof-icon-wrap">
+                            <i class="fab fa-microsoft hof-icon"></i>
+                        </div>
+                        <div class="hof-content">
+                            <h4>Microsoft</h4>
+                            <span class="hof-role">Acknowledgment</span>
+                            <p>Discovered and reported authentication and access control edge cases.</p>
+                            <span class="severity-pill sev-crit">Critical / High</span>
+                        </div>
+                    </div>
+
+                    <!-- HOF Card 3 -->
+                    <div class="hof-card">
+                        <div class="hof-icon-wrap">
+                            <i class="fas fa-building-columns hof-icon"></i>
+                        </div>
+                        <div class="hof-content">
+                            <h4>FinTech & Banking</h4>
+                            <span class="hof-role">Independent Auditor</span>
+                            <p>Uncovered race condition and parameter tampering flaws in transactional workflows.</p>
+                            <span class="severity-pill sev-crit">Critical Impact</span>
+                        </div>
+                    </div>
+
+                    <!-- HOF Card 4 -->
+                    <div class="hof-card">
+                        <div class="hof-icon-wrap">
+                            <i class="fas fa-shield-halved hof-icon"></i>
+                        </div>
+                        <div class="hof-content">
+                            <h4>HackerOne Programs</h4>
+                            <span class="hof-role">Bug Bounty Hunter</span>
+                            <p>Consistently triaged valid reports across private and public bug bounty scopes.</p>
+                            <span class="severity-pill sev-high">Top Performer</span>
+                        </div>
+                    </div>
+
+                    <!-- HOF Card 5 -->
+                    <div class="hof-card">
+                        <div class="hof-icon-wrap">
+                            <i class="fas fa-crown hof-icon"></i>
+                        </div>
+                        <div class="hof-content">
+                            <h4>Bugcrowd</h4>
+                            <span class="hof-role">Ranked Researcher</span>
+                            <p>Awarded bounties and kudos for high-signal IDOR and SSRF findings.</p>
+                            <span class="severity-pill sev-med">Verified Reporter</span>
+                        </div>
+                    </div>
+
+                    <!-- HOF Card 6 -->
+                    <div class="hof-card">
+                        <div class="hof-icon-wrap">
+                            <i class="fas fa-certificate hof-icon"></i>
+                        </div>
+                        <div class="hof-content">
+                            <h4>Government & Defense VDP</h4>
+                            <span class="hof-role">Vulnerability Reporter</span>
+                            <p>Acknowledged in governmental responsible disclosure programs for infrastructure hardening.</p>
+                            <span class="severity-pill sev-high">Commendation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research & Case Studies -->
+        <section id="research" class="section research-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 04. VULNERABILITY ARCHIVES</span>
+                    <h2 class="section-title">Research & Case Studies</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-subtitle">
+                    Select anonymized technical breakdowns of complex vulnerability chains discovered during penetration tests and bounty engagements.
+                </p>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Disciplines</button>
+                    <button class="filter-btn" data-filter="web">Web & Logic</button>
+                    <button class="filter-btn" data-filter="api">API Security</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud / SSRF</button>
+                </div>
+
+                <div class="research-grid">
+                    <!-- Project 1 -->
+                    <div class="research-card" data-category="web">
+                        <div class="card-status-bar">
+                            <span class="sev-tag sev-crit">CRITICAL</span>
+                            <span class="case-id">CASE-#0194</span>
+                        </div>
+                        <h3 class="card-title">Full Account Takeover via Broken OAuth 2.0 State & Redirection</h3>
+                        <p class="card-desc">
+                            Identified an absent state validation coupled with a wildcard open redirect URI in an OAuth integration, allowing attackers to harvest authorization codes and take over arbitrary enterprise accounts.
+                        </p>
+                        <div class="card-tags">
+                            <span>OAuth 2.0</span>
+                            <span>Account Takeover</span>
+                            <span>Authentication</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="impact-badge"><i class="fas fa-skull-crossbones"></i> Full Impact</span>
+                            <button class="modal-trigger-btn" data-modal="modal-oauth">Read Abstract &rarr;</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="research-card" data-category="api">
+                        <div class="card-status-bar">
+                            <span class="sev-tag sev-crit">CRITICAL</span>
+                            <span class="case-id">CASE-#0241</span>
+                        </div>
+                        <h3 class="card-title">Blind BOLA/IDOR Permitting Unauthorized Bulk Financial Data Extraction</h3>
+                        <p class="card-desc">
+                            Exploited unverified tenant boundaries in a microservices GraphQL gateway, where missing object-level access control exposed thousands of sensitive transactional ledger entries.
+                        </p>
+                        <div class="card-tags">
+                            <span>GraphQL</span>
+                            <span>BOLA / IDOR</span>
+                            <span>Data Exfiltration</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="impact-badge"><i class="fas fa-database"></i> High Risk</span>
+                            <button class="modal-trigger-btn" data-modal="modal-idor">Read Abstract &rarr;</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="research-card" data-category="web">
+                        <div class="card-status-bar">
+                            <span class="sev-tag sev-high">HIGH</span>
+                            <span class="case-id">CASE-#0312</span>
+                        </div>
+                        <h3 class="card-title">Concurrency Flaw (Race Condition) in Digital Coupon & Balance Processing</h3>
+                        <p class="card-desc">
+                            Demonstrated a microsecond-level race window using multi-threaded HTTP requests that allowed coupon reuse and negative balance generation, completely circumventing database row-locking.
+                        </p>
+                        <div class="card-tags">
+                            <span>Race Condition</span>
+                            <span>Business Logic</span>
+                            <span>Python Multithreading</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="impact-badge"><i class="fas fa-coins"></i> Financial Risk</span>
+                            <button class="modal-trigger-btn" data-modal="modal-race">Read Abstract &rarr;</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="research-card" data-category="cloud">
+                        <div class="card-status-bar">
+                            <span class="sev-tag sev-crit">CRITICAL</span>
+                            <span class="case-id">CASE-#0388</span>
+                        </div>
+                        <h3 class="card-title">SSRF via Webhook Validator to Cloud Metadata API (IMDSv1)</h3>
+                        <p class="card-desc">
+                            Circumvented DNS rebinding and internal IP filters in a webhook validation engine, leading to unauthorized querying of AWS 169.254.169.254 metadata and extraction of IAM role credentials.
+                        </p>
+                        <div class="card-tags">
+                            <span>SSRF</span>
+                            <span>AWS Metadata</span>
+                            <span>Cloud Security</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="impact-badge"><i class="fas fa-cloud"></i> Cloud Takeover</span>
+                            <button class="modal-trigger-btn" data-modal="modal-ssrf">Read Abstract &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal Section -->
+        <section id="terminal-section" class="section terminal-fullscreen-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 05. INTERACTIVE_CONSOLE</span>
+                    <h2 class="section-title">Interactive Cyber Terminal</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-subtitle">
+                    Emulate a red team command session. Type commands like <span class="accent-cyan">help</span>, <span class="accent-cyan">whoami</span>, <span class="accent-cyan">skills</span>, <span class="accent-cyan">hof</span>, <span class="accent-cyan">contact</span>, or <span class="accent-cyan">matrix</span>.
+                </p>
+
+                <div class="full-terminal-card shadow-glow-cyan">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="term-btn btn-close"></span>
+                            <span class="term-btn btn-minimize"></span>
+                            <span class="term-btn btn-expand"></span>
+                        </div>
+                        <div class="terminal-title">parth@offensive-box: ~/interactive-shell</div>
+                        <div class="terminal-stats">BASH 5.2 | PTY ACTIVE</div>
+                    </div>
+                    <div class="interactive-terminal-body" id="interactive-terminal" tabindex="0">
+                        <div class="terminal-banner">
+  _____            _   _       _____       _             _    _ 
+ |  __ \          | | | |     / ____|     | |           | |  (_)
+ | |__) |_ _ _ __ | |_| |__  | (___   ___ | | __ _ _ __ | | ___ 
+ |  ___/ _` | '__|| __| '_ \  \___ \ / _ \| |/ _` | '_ \| |/ / |
+ | |  | (_| | |   | |_| | | | ____) | (_) | | (_| | | | |   <| |
+ |_|   \__,_|_|    \__|_| |_||_____/ \___/|_|\__,_|_| |_|_|\_\_|
+                                                                
+ [!] PARTH SOLANKI OFFENSIVE CONSOLE v2.4 (x86_64-kali-linux)
+ [*] Type 'help' for a full list of accessible console commands.
+                        </div>
+                        <div id="terminal-history"></div>
+                        <div class="terminal-input-row">
+                            <span class="prompt-user">visitor@parth-sec</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-char">$</span>
+                            <input type="text" id="terminal-cmd-input" autocomplete="off" spellcheck="false" autofocus>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Training -->
+        <section id="certifications" class="section certs-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// CERTIFICATION_INDEX</span>
+                    <h2 class="section-title">Credentials & Methodologies</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="certs-grid">
+                    <div class="cert-item">
+                        <i class="fas fa-award cert-icon"></i>
+                        <div class="cert-text">
+                            <h4>Offensive Security Methodologies</h4>
+                            <p>PTES (Penetration Testing Execution Standard) & OWASP Top 10 / API Top 10</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-bug cert-icon"></i>
+                        <div class="cert-text">
+                            <h4>Advanced Web Pentesting</h4>
+                            <p>Manual state manipulation, deserialization, request smuggling & logic bypass</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-shield-virus cert-icon"></i>
+                        <div class="cert-text">
+                            <h4>Red Teaming Operations</h4>
+                            <p>Threat simulation, adversarial modeling, and defensive evasion tactics</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-key cert-icon"></i>
+                        <div class="cert-text">
+                            <h4>Responsible Disclosure</h4>
+                            <p>Committed to coordinated vulnerability disclosure and high ethical standards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// 06. SECURE_CHANNEL</span>
+                    <h2 class="section-title">Initiate Contact</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-subtitle">
+                    Seeking a security assessment, bug bounty consultation, or red team collaboration? Establish communication below.
+                </p>
+
+                <div class="contact-grid">
+                    <!-- Form -->
+                    <div class="cyber-box contact-form-box">
+                        <div class="box-title">
+                            <i class="fas fa-terminal"></i> TRANSMIT_MESSAGE
+                        </div>
+                        <form id="contact-form" class="cyber-form">
+                            <div class="form-group">
+                                <label for="sender-name"><span class="accent-cyan">01.</span> Name / Organization</label>
+                                <input type="text" id="sender-name" name="name" required placeholder="John Doe (or Anonymous)">
+                            </div>
+                            <div class="form-group">
+                                <label for="sender-email"><span class="accent-cyan">02.</span> Contact Email</label>
+                                <input type="email" id="sender-email" name="email" required placeholder="security@yourcompany.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="sender-subject"><span class="accent-cyan">03.</span> Objective / Subject</label>
+                                <input type="text" id="sender-subject" name="subject" required placeholder="Web Pentest / Bug Bounty / Advisory Inquiry">
+                            </div>
+                            <div class="form-group">
+                                <label for="sender-message"><span class="accent-cyan">04.</span> Transmission Payload</label>
+                                <textarea id="sender-message" name="message" rows="5" required placeholder="Describe project requirements, scope, or message..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-cyan w-100">
+                                <i class="fas fa-paper-plane"></i> Transmit Securely
+                            </button>
+                            <div id="form-feedback" class="form-feedback-msg"></div>
+                        </form>
+                    </div>
+
+                    <!-- Direct Connect Info & PGP -->
+                    <div class="contact-sidebar">
+                        <div class="cyber-box direct-info-box">
+                            <div class="box-title">
+                                <i class="fas fa-satellite-dish"></i> DIRECT_ENDPOINTS
+                            </div>
+                            
+                            <div class="contact-links-list">
+                                <a href="https://linkedin.com/in/parth-solanki-b3713a171" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                                    <div class="link-icon"><i class="fab fa-linkedin"></i></div>
+                                    <div class="link-info">
+                                        <span class="link-title">LinkedIn</span>
+                                        <span class="link-val">linkedin.com/in/parth-solanki-b3713a171</span>
+                                    </div>
+                                    <i class="fas fa-external-link-alt external-arrow"></i>
+                                </a>
+
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                                    <div class="link-icon"><i class="fab fa-github"></i></div>
+                                    <div class="link-info">
+                                        <span class="link-title">GitHub</span>
+                                        <span class="link-val">github.com/parth-solanki</span>
+                                    </div>
+                                    <i class="fas fa-external-link-alt external-arrow"></i>
+                                </a>
+
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                                    <div class="link-icon"><i class="fab fa-x-twitter"></i></div>
+                                    <div class="link-info">
+                                        <span class="link-title">Twitter / X</span>
+                                        <span class="link-val">@parthsolanki_sec</span>
+                                    </div>
+                                    <i class="fas fa-external-link-alt external-arrow"></i>
+                                </a>
+                            </div>
+
+                            <div class="pgp-card">
+                                <div class="pgp-header">
+                                    <span class="pgp-title"><i class="fas fa-key"></i> PGP Fingerprint</span>
+                                    <button id="copy-pgp-btn" class="btn btn-xs btn-outline-cyan">Copy Key</button>
+                                </div>
+                                <code class="pgp-fingerprint">
+                                    9A82 4B5F 1C73 8E90 D421 5683 2419 BCFE 8092 1A3E
+                                </code>
+                            </div>
+
+                            <div class="availability-status-card">
+                                <div class="avail-indicator"></div>
+                                <div class="avail-text">
+                                    <strong>Status: Available</strong>
+                                    <span>Accepting private invites & security engagements</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-brand">[PARTH.SOLANKI]</span>
+                <span class="footer-copy">&copy; 2026 Parth Solanki. All rights reserved. Built with precision for offensive security.</span>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top" title="Return to Top">
+                    <i class="fas fa-arrow-up"></i> TOP
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Dialogs for Case Studies -->
+    <div id="modal-container" class="cyber-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="modal-title">Case Study Details</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-content">
+                <!-- Injected via JS -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-cyan modal-close-btn">Close Intel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/terminal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

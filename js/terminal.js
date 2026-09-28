@@ -115,7 +115,7 @@ Type: RSA 4096-bit (Encrypted communication verified)
         contact: () => `
 <span class="accent-cyan">[COMMUNICATION ENDPOINTS]</span>
 LinkedIn:  <a href="https://linkedin.com/in/parth-solanki-b3713a171" target="_blank" style="color:var(--accent-cyan);text-decoration:underline;">linkedin.com/in/parth-solanki-b3713a171</a>
-GitHub:    <a href="https://github.com" target="_blank" style="color:var(--accent-cyan);text-decoration:underline;">github.com/parth-solanki</a>
+GitHub:    <a href="https://github.com/darkbytesec-ctrl" target="_blank" style="color:var(--accent-cyan);text-decoration:underline;">github.com/darkbytesec-ctrl</a>
 X/Twitter: <a href="https://twitter.com" target="_blank" style="color:var(--accent-cyan);text-decoration:underline;">@parthsolanki_sec</a>
 Form:      Scroll to bottom to send a direct message.
 `,
